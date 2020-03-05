@@ -1,0 +1,431 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A0362F6B-F001-40A8-AFDB-E6E17CC57B79}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Nutricionista</RootNamespace>
+    <AssemblyName>Nutricionista</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CircularProgressBar, Version=2.7.0.7, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\CircularProgressBar.2.7.0.7\lib\net40\CircularProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.1.1.2\lib\net45\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=2.5.1.1345, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.2.5.1\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
+      <HintPath>..\packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
+    </Reference>
+    <Reference Include="Xander.UI.Web, Version=1.0.0.19, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xander.UI.Web.0.1.19\lib\net40\Xander.UI.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="XanderUI">
+      <HintPath>..\..\..\..\Downloads\csharpui.comXanderUI_DLL\XanderUI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Alimento.cs">
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AntecedentePersonal.cs">
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AntecedentesF.cs">
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AntecedentesP.cs">
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AntecednteFamiliar.cs">
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Antropometria.cs">
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ARL.cs">
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Atencion_Historia.cs">
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cargar Datos\Cls_Colecciones_Datos.cs" />
+    <Compile Include="Cargo.cs">
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="CITAS.cs">
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Citas\FrmAsignarEspecialidad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Citas\FrmAsignarEspecialidad.Designer.cs">
+      <DependentUpon>FrmAsignarEspecialidad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Citas\FrmCitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Citas\FrmCitas.Designer.cs">
+      <DependentUpon>FrmCitas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Citas\FrmHorario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Citas\FrmHorario.Designer.cs">
+      <DependentUpon>FrmHorario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Citas\frmMedico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Citas\frmMedico.Designer.cs">
+      <DependentUpon>frmMedico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ciudad.cs">
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Comida.cs">
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Conexion\CadenaConexion.cs" />
+    <Compile Include="Conexion\ClsGestores.cs" />
+    <Compile Include="Conexion\ClsGuardarImagen.cs" />
+    <Compile Include="Conexion\ClsNumeroLetras.cs" />
+    <Compile Include="Conexion\ClsSqlServer.cs" />
+    <Compile Include="Conexion\ClsUsuarioLogin.cs" />
+    <Compile Include="Conexion\italk_theme_-_c#.cs" />
+    <Compile Include="Conversiones\Cls_Convertir.cs" />
+    <Compile Include="Departamento.cs">
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dominancia.cs">
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EPS.cs">
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ESPECIALIDADES.cs">
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EstadoCivil.cs">
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Estados\Cls_Estados_Atencion.cs" />
+    <Compile Include="Estado_Atencion.cs">
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Frecuencia_Consmo.cs">
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Paciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Paciente.Designer.cs">
+      <DependentUpon>Frm_Paciente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Atencion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Atencion.Designer.cs">
+      <DependentUpon>Frm_Atencion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_InicioSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_InicioSesion.Designer.cs">
+      <DependentUpon>Frm_InicioSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Menu.Designer.cs">
+      <DependentUpon>Frm_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Pacientes_Pendientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Pacientes_Pendientes.Designer.cs">
+      <DependentUpon>Frm_Pacientes_Pendientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Genero.cs">
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HabitoDetalle.cs">
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HABITOS.cs">
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Historia Clinica\Cls_Actualizar_Estado_Atencion.cs" />
+    <Compile Include="Historia Clinica\Cls_Consultar_Historia.cs" />
+    <Compile Include="Historia Clinica\Cls_Detalle_Atencion.cs" />
+    <Compile Include="Historia Clinica\Cls_Insertar_Atencion.cs" />
+    <Compile Include="Historia Clinica\Cls_Insertar_Paiente_Pendiente.cs" />
+    <Compile Include="HistorialPeso.cs">
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Historial_Peso.cs">
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HORARIOS.cs">
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Medico.cs">
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MEDICOS.cs">
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MEDICOS_ESPECIALIDADES.cs">
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Alimento.cs" />
+    <Compile Include="Modelo\AntecedentePersonal.cs" />
+    <Compile Include="Modelo\AntecedentesF.cs" />
+    <Compile Include="Modelo\AntecedentesP.cs" />
+    <Compile Include="Modelo\AntecednteFamiliar.cs" />
+    <Compile Include="Modelo\Antropometria.cs" />
+    <Compile Include="Modelo\Arl.cs" />
+    <Compile Include="Modelo\AtencionHistoria.cs" />
+    <Compile Include="Modelo\Cargo.cs" />
+    <Compile Include="Modelo\Citas.cs" />
+    <Compile Include="Modelo\Ciudad.cs" />
+    <Compile Include="Modelo\Comida.cs" />
+    <Compile Include="Modelo\Departamento.cs" />
+    <Compile Include="Modelo\Dominancia.cs" />
+    <Compile Include="Modelo\Eps.cs" />
+    <Compile Include="Modelo\Especialidades.cs" />
+    <Compile Include="Modelo\EstadoAtencion.cs" />
+    <Compile Include="Modelo\EstadoCivil.cs" />
+    <Compile Include="Modelo\FrecuenciaConsmo.cs" />
+    <Compile Include="Modelo\Genero.cs" />
+    <Compile Include="Modelo\HabitoDetalle.cs" />
+    <Compile Include="Modelo\Habitos.cs" />
+    <Compile Include="Modelo\HistorialPeso.cs" />
+    <Compile Include="Modelo\HistorialPeso1.cs" />
+    <Compile Include="Modelo\Horarios.cs" />
+    <Compile Include="Modelo\Medico.cs" />
+    <Compile Include="Modelo\Medicos.cs" />
+    <Compile Include="Modelo\MedicosEspecialidades.cs" />
+    <Compile Include="Modelo\NivelEducativo.cs" />
+    <Compile Include="Modelo\Ocupacion.cs" />
+    <Compile Include="Modelo\paciente.cs" />
+    <Compile Include="Modelo\Pacientes.cs" />
+    <Compile Include="Modelo\Profesion.cs" />
+    <Compile Include="Modelo\Recordatorio.cs" />
+    <Compile Include="Modelo\TipoDocumento.cs" />
+    <Compile Include="Modelo\TipoSangre.cs" />
+    <Compile Include="Modelo\Usuario.cs" />
+    <Compile Include="Modelo\UsuarioModulo.cs" />
+    <Compile Include="Modelo\Usuarios.cs" />
+    <Compile Include="Modelo\ViewPaciente.cs" />
+    <Compile Include="Model_Historia_Clinica.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_Historia_Clinica.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model_Historia_Clinica.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model_Historia_Clinica.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model_Historia_Clinica.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="NivelEducativo.cs">
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ocupacion.cs">
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Operaciones Comun\ConsultasComun.cs" />
+    <Compile Include="Paciente.cs">
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Paciente\Oper_Paciente.cs" />
+    <Compile Include="Memoria\Cls_AtencionAgregada.cs" />
+    <Compile Include="Memoria\Cls_PacienteAgregado.cs" />
+    <Compile Include="Profesion.cs">
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recordatorio.cs">
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="servicio\ApiEspecialidad.cs" />
+    <Compile Include="servicio\ApiMedico.cs" />
+    <Compile Include="servicio\ApiMedicosEspecialidades.cs" />
+    <Compile Include="servicio\ApiPaciente.cs" />
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tabalas Atencion\Cls_Antecedente_Familiar.cs" />
+    <Compile Include="Tabalas Atencion\Cls_Antecedente_Personal.cs" />
+    <Compile Include="Tabalas Atencion\Cls_Historia_Paciente.cs" />
+    <Compile Include="Tablas\Cls_Atencion.cs" />
+    <Compile Include="Tablas\Cls_AntecedentesFP.cs" />
+    <Compile Include="Tablas\Cls_Arl.cs" />
+    <Compile Include="Tablas\Cls_Ciudad.cs" />
+    <Compile Include="Tablas\Cls_Comida.cs" />
+    <Compile Include="Tablas\Cls_DatosConsulta.cs" />
+    <Compile Include="Tablas\Cls_Departamento.cs" />
+    <Compile Include="Tablas\Cls_Dominancia.cs" />
+    <Compile Include="Tablas\Cls_Eps.cs" />
+    <Compile Include="Tablas\Cls_EstadoCivil.cs" />
+    <Compile Include="Tablas\Cls_Genero.cs" />
+    <Compile Include="Tablas\Cls_HabitoDetalle.cs" />
+    <Compile Include="Tablas\Cls_Habitos.cs" />
+    <Compile Include="Tablas\Cls_Medico.cs" />
+    <Compile Include="Tablas\Cls_NivelEducativo.cs" />
+    <Compile Include="Tablas\Cls_Profesion.cs" />
+    <Compile Include="Tablas\Cls_Paciente.cs" />
+    <Compile Include="Tablas\Cls_TipoDocumento.cs" />
+    <Compile Include="Tablas\Cls_TipoSangre.cs" />
+    <Compile Include="TipoDocumento.cs">
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TipoSangre.cs">
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Usuario.cs">
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="UsuarioModulo.cs">
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USUARIOS.cs">
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <Compile Include="View_Paciente.cs">
+      <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Citas\FrmCitas.resx">
+      <DependentUpon>FrmCitas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Citas\FrmHorario.resx">
+      <DependentUpon>FrmHorario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Citas\frmMedico.resx">
+      <DependentUpon>frmMedico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Paciente.resx">
+      <DependentUpon>Frm_Paciente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Atencion.resx">
+      <DependentUpon>Frm_Atencion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_InicioSesion.resx">
+      <DependentUpon>Frm_InicioSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Menu.resx">
+      <DependentUpon>Frm_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Pacientes_Pendientes.resx">
+      <DependentUpon>Frm_Pacientes_Pendientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EntityDeploy Include="Model_Historia_Clinica.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model_Historia_Clinica.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model_Historia_Clinica.edmx.diagram">
+      <DependentUpon>Model_Historia_Clinica.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model_Historia_Clinica.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model_Historia_Clinica.Context.cs</LastGenOutput>
+      <DependentUpon>Model_Historia_Clinica.edmx</DependentUpon>
+    </Content>
+    <Content Include="Model_Historia_Clinica.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model_Historia_Clinica.edmx</DependentUpon>
+      <LastGenOutput>Model_Historia_Clinica.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

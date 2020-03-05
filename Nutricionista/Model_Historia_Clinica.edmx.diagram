@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="917acc6138da40c3b30c493483b47da4" Name="Diagram1">
+        <EntityTypeShape EntityType="HistoriaClinica_NutricionistaModel.Alimento" Width="1.5" PointX="0.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HistoriaClinica_NutricionistaModel.AntecedentePersonal" Width="1.5" PointX="3" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HistoriaClinica_NutricionistaModel.AntecedentesF" Width="1.5" PointX="3.75" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HistoriaClinica_NutricionistaModel.AntecedentesP" Width="1.5" PointX="0.75" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HistoriaClinica_NutricionistaModel.AntecednteFamiliar" Width="1.5" PointX="6" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HistoriaClinica_NutricionistaModel.Antropometria" Width="1.5" PointX="3" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HistoriaClinica_NutricionistaModel.ARL" Width="1.5" PointX="10.5" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HistoriaClinica_NutricionistaModel.Atencion_Historia" Width="1.5" PointX="0.75" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HistoriaClinica_NutricionistaModel.Cargo" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HistoriaClinica_NutricionistaModel.Ciudad" Width="1.5" PointX="11" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HistoriaClinica_NutricionistaModel.Comida" Width="1.5" PointX="3.75" PointY="23.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HistoriaClinica_NutricionistaModel.Departamento" Width="1.5" PointX="8.75" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HistoriaClinica_NutricionistaModel.Dominancia" Width="1.5" PointX="11" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HistoriaClinica_NutricionistaModel.EPS" Width="1.5" PointX="11" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="HistoriaClinica_NutricionistaModel.Estado_Atencion" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HistoriaClinica_NutricionistaModel.EstadoCivil" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HistoriaClinica_NutricionistaModel.Frecuencia_Consmo" Width="1.5" PointX="3" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HistoriaClinica_NutricionistaModel.Genero" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HistoriaClinica_NutricionistaModel.HabitoDetalle" Width="1.5" PointX="6" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HistoriaClinica_NutricionistaModel.HABITOS" Width="1.5" PointX="3.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HistoriaClinica_NutricionistaModel.HistorialPeso" Width="1.5" PointX="3" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HistoriaClinica_NutricionistaModel.Medico" Width="1.5" PointX="5.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HistoriaClinica_NutricionistaModel.NivelEducativo" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HistoriaClinica_NutricionistaModel.Ocupacion" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HistoriaClinica_NutricionistaModel.Paciente" Width="1.5" PointX="13.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HistoriaClinica_NutricionistaModel.Profesion" Width="1.5" PointX="14.125" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HistoriaClinica_NutricionistaModel.Recordatorio" Width="1.5" PointX="6" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HistoriaClinica_NutricionistaModel.sysdiagrams" Width="1.5" PointX="15.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HistoriaClinica_NutricionistaModel.TipoDocumento" Width="1.5" PointX="11" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HistoriaClinica_NutricionistaModel.TipoSangre" Width="1.5" PointX="11" PointY="16.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HistoriaClinica_NutricionistaModel.Usuario" Width="1.5" PointX="14.125" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="HistoriaClinica_NutricionistaModel.UsuarioModulo" Width="1.5" PointX="17.125" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HistoriaClinica_NutricionistaModel.Historial_Peso" Width="2" PointX="15.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HistoriaClinica_NutricionistaModel.View_Paciente" Width="1.5" PointX="17" PointY="11.625" IsExpanded="true" />
+        <AssociationConnector Association="HistoriaClinica_NutricionistaModel.FK_Frecuencia_Consmo_Alimento" ManuallyRouted="false" />
+        <AssociationConnector Association="HistoriaClinica_NutricionistaModel.FK_AntecedentePersonal_AntecedentesP" ManuallyRouted="false" />
+        <AssociationConnector Association="HistoriaClinica_NutricionistaModel.FK_AntecedentePersonal_Atencion_Historia" ManuallyRouted="false" />
+        <AssociationConnector Association="HistoriaClinica_NutricionistaModel.FK_AntecednteFamiliar_AntecedentesF" ManuallyRouted="false" />
+        <AssociationConnector Association="HistoriaClinica_NutricionistaModel.FK_AntecednteFamiliar_Atencion_Historia" ManuallyRouted="false" />
+        <AssociationConnector Association="HistoriaClinica_NutricionistaModel.FK_Antropometria_Atencion_Historia" ManuallyRouted="false" />
+        <AssociationConnector Association="HistoriaClinica_NutricionistaModel.FK_Paciente_ARL" ManuallyRouted="false" />
+        <AssociationConnector Association="HistoriaClinica_NutricionistaModel.FK_Frecuencia_Consmo_Atencion_Historia" ManuallyRouted="false" />
+        <AssociationConnector Association="HistoriaClinica_NutricionistaModel.FK_HabitoDetalle_Atencion_Historia" ManuallyRouted="false" />
+        <AssociationConnector Association="HistoriaClinica_NutricionistaModel.FK_HistorialPeso_Atencion_Historia" ManuallyRouted="false" />
+        <AssociationConnector Association="HistoriaClinica_NutricionistaModel.FK_Recordatorio_Atencion_Historia" ManuallyRouted="false" />
+        <AssociationConnector Association="HistoriaClinica_NutricionistaModel.FK_Ciudad_Departamento" ManuallyRouted="false" />
+        <AssociationConnector Association="HistoriaClinica_NutricionistaModel.FK_Paciente_Ciudad" ManuallyRouted="false" />
+        <AssociationConnector Association="HistoriaClinica_NutricionistaModel.FK_Recordatorio_Comida" ManuallyRouted="false" />
+        <AssociationConnector Association="HistoriaClinica_NutricionistaModel.FK_Paciente_Dominancia" ManuallyRouted="false" />
+        <AssociationConnector Association="HistoriaClinica_NutricionistaModel.FK_Paciente_EPS" ManuallyRouted="false" />
+        <AssociationConnector Association="HistoriaClinica_NutricionistaModel.FK_HabitoDetalle_HABITOS" ManuallyRouted="false" />
+        <AssociationConnector Association="HistoriaClinica_NutricionistaModel.FK_Paciente_TipoDocumento" ManuallyRouted="false" />
+        <AssociationConnector Association="HistoriaClinica_NutricionistaModel.FK_Paciente_TipoSangre" ManuallyRouted="false" />
+        <AssociationConnector Association="HistoriaClinica_NutricionistaModel.FK_UsuarioModulo_Usuario" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="HistoriaClinica_NutricionistaModel.CITAS" Width="1.5" PointX="13.625" PointY="22.5" />
+        <EntityTypeShape EntityType="HistoriaClinica_NutricionistaModel.ESPECIALIDADES" Width="1.5" PointX="8.375" PointY="19.25" />
+        <EntityTypeShape EntityType="HistoriaClinica_NutricionistaModel.HORARIOS" Width="1.5" PointX="10.625" PointY="30.125" />
+        <EntityTypeShape EntityType="HistoriaClinica_NutricionistaModel.MEDICOS" Width="1.5" PointX="8.375" PointY="22.25" />
+        <EntityTypeShape EntityType="HistoriaClinica_NutricionistaModel.MEDICOS_ESPECIALIDADES" Width="1.5" PointX="10.625" PointY="23" />
+        <EntityTypeShape EntityType="HistoriaClinica_NutricionistaModel.USUARIOS" Width="1.5" PointX="13.375" PointY="13.75" />
+        <AssociationConnector Association="HistoriaClinica_NutricionistaModel.FK_MEDICOS_CITAS" />
+        <AssociationConnector Association="HistoriaClinica_NutricionistaModel.FK_ESPECIALIDADES" />
+        <AssociationConnector Association="HistoriaClinica_NutricionistaModel.FK_MEDICOS_HORARIOS" />
+        <AssociationConnector Association="HistoriaClinica_NutricionistaModel.FK_MEDICOS" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
