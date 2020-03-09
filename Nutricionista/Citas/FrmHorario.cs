@@ -64,20 +64,35 @@ namespace Nutricionista.Citas
             var error = apiHorario.error;
             if (error == "OK")
             {
+                var x = 0;
                 LblNombre.Text = horarioMedico[0].Medico.Nombres + " " + horarioMedico[0].Medico.Apellidos;
                 medicoID = horarioMedico[0].Medico.Id;
                 foreach (Horarios item in horarioMedico)
                 {
-                    DgvHorario.Rows.Add(item.Id, item.Fechaatencion, item.Inicioatencion, item.Finatencion, "", item.Activo);
+                    DgvHorario.Rows.Add(item.Id, item.Fechaatencion, item.Inicioatencion, item.Finatencion, item.Nota, item.Activo);
+                    DgvHorario.Rows[x].ReadOnly = true;
+                    //DgvHorario.Rows[x].DefaultCellStyle. = true;
+                    x++;
                 }
             }
             else
             {
-                IndicadorOcupado.Visible = false;
-                LblNombre.Text = "";
-                DgvHorario.Rows.Clear();
-                medicoID = 0;
-                MessageBox.Show(Mensajes.MensajeAlerta + "\n" + error);
+                var apiMedico = new ApiMedico();
+                var medico = await apiMedico.MedicosAsync(dni);
+                var error2 = apiMedico.error;
+                if (error2 == "OK")
+                {
+                    LblNombre.Text = medico.Nombres + " " + medico.Apellidos;
+                    medicoID = medico.Id;
+                }
+                else
+                {
+                    IndicadorOcupado.Visible = false;
+                    LblNombre.Text = "";
+                    DgvHorario.Rows.Clear();
+                    medicoID = 0;
+                    MessageBox.Show(Mensajes.MensajeAlerta + "\n" + error);
+                }
             }
             IndicadorOcupado.Visible = false;
             txtMedico.Focus();
@@ -87,7 +102,7 @@ namespace Nutricionista.Citas
         int filamore = 0;
         private void BtnNuevaFila_Click(object sender, EventArgs e)
         {
-            DgvHorario.Rows.Add(null, DateTime.Now.Date.AddDays(filamore), "8:00 a. m.", "04:00 a. m.", null, 1);
+            DgvHorario.Rows.Add(null, DateTime.Now.Date.AddDays(filamore), "8:00 a. m.", "04:00 a. m.", null, true);
             filamore++;
         }
 
@@ -120,10 +135,11 @@ namespace Nutricionista.Citas
                 return;
             }
 
-            if (MessageBox.Show("¿Desea continuar?","",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.No)
+            if (MessageBox.Show("¿Desea continuar?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
             {
                 return;
             }
+
 
             BtnGuardar.Focus();
             DgvHorario.CancelEdit();
@@ -131,8 +147,19 @@ namespace Nutricionista.Citas
             int fila = 0;
             var horariosPOST = new List<Horarios>();
             var horariosPUT = new List<Horarios>();
+
+            
+            
+
+
+
+
+
+
             foreach (DataGridViewRow item in DgvHorario.Rows)
             {
+                
+
                 if (string.IsNullOrEmpty(item.Cells["DgvHorariofecha"].Value.ToString()))
                 {
                     DgvHorario.Rows[fila].Cells["DgvHorariofecha"].Style.BackColor = Color.Red;
@@ -154,12 +181,23 @@ namespace Nutricionista.Citas
                     return;
                 }
 
+                
+
                 var horaInicio = item.Cells["DgvHorarioHorainicio"].Value.ToString();
                 var horaFinal = item.Cells["DgvHorarioHorafinal"].Value.ToString();
                 var fechaHorario = item.Cells["DgvHorariofecha"].Value.ToString();
                 var activo = Convert.ToBoolean(item.Cells["DgvHorarioActivar"].Value.ToString());
                 var nota = item.Cells["DgvHorarioNota"].Value != null ? item.Cells["DgvHorarioNota"].Value.ToString() : null;
-                var id = item.Cells["DgvHorarioNota"].Value != null ? int.Parse(item.Cells["DgvHorarioid"].Value.ToString()) : 0;
+                var id = item.Cells["DgvHorarioid"].Value != null ? int.Parse(item.Cells["DgvHorarioid"].Value.ToString()) : 0;
+
+                //Validar fechas
+                if (Convert.ToDateTime(item.Cells["DgvHorariofecha"].Value.ToString()).Date < DateTime.Now.Date && id<=0)
+                {
+                    DgvHorario.Rows[fila].Cells["DgvHorariofecha"].Style.BackColor = Color.Red;
+                    MessageBox.Show("La fehca de la fila " + (fila + 1) + " no puede ser menor a la fecha actual");
+                    return;
+                }
+
 
                 if (!ValidarHora(horaInicio))
                 {
@@ -176,6 +214,7 @@ namespace Nutricionista.Citas
 
                 if (id <= 0)
                 {
+
                     horariosPOST.Add(
                     new Horarios
                     {
@@ -183,12 +222,16 @@ namespace Nutricionista.Citas
                         Fechaatencion = Convert.ToDateTime(fechaHorario).Date.Date,
                         Inicioatencion = horaInicio,
                         Finatencion = horaFinal,
+                        Nota = nota,
                         Fecharegistro = DateTime.Now.Date.Date,
                         Activo = Convert.ToBoolean(activo)
                     });
                 }
                 else
-                    horariosPUT.Add(
+                {
+                    if (item.DefaultCellStyle.BackColor==Color.WhiteSmoke)
+                    {
+                        horariosPUT.Add(
                     new Horarios
                     {
                         Id = id,
@@ -196,13 +239,15 @@ namespace Nutricionista.Citas
                         Fechaatencion = Convert.ToDateTime(fechaHorario).Date.Date,
                         Inicioatencion = horaInicio,
                         Finatencion = horaFinal,
+                        Nota = nota,
                         Fecharegistro = DateTime.Now.Date.Date,
                         Activo = Convert.ToBoolean(activo)
                     });
+                    }                    
+                }
 
                 fila++;
             }
-            //Console.WriteLine(horarios);
             var apiHorario = new ApiHorario();
             if (horariosPOST.Count > 0)
             {
@@ -221,18 +266,8 @@ namespace Nutricionista.Citas
                 }
             }
             var error = apiHorario.error;
-            //if (error == "OK")
-            //{
+
             MessageBox.Show("Datos insertados correctamente.", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //}
-            //else
-            //    MessageBox.Show(error);
-
-            //foreach (Horarios item in horarios)
-            //{
-
-            //}
-            //PostHorario(horarios);
         }
 
         public bool ValidarHora(string hora)
@@ -250,5 +285,18 @@ namespace Nutricionista.Citas
             return res;
         }
 
+        private void DgvHorario_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (DgvHorario.Rows[e.RowIndex].ReadOnly==true)
+            {
+                DgvHorario.Rows[e.RowIndex].ReadOnly = false;
+                DgvHorario.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.WhiteSmoke;
+            }
+            else
+            {
+                DgvHorario.Rows[e.RowIndex].ReadOnly = true;
+                DgvHorario.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.White;
+            }
+        }
     }
 }

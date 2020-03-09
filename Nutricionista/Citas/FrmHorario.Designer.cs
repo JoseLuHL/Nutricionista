@@ -28,16 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHorario));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.BtnEliminarFila = new iTalk.iTalk_Button_1();
             this.BtnNuevaFila = new iTalk.iTalk_Button_1();
             this.iTalk_Panel1 = new iTalk.iTalk_Panel();
             this.DgvHorario = new System.Windows.Forms.DataGridView();
+            this.DgvHorarioid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DgvHorariofecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DgvHorarioHorainicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DgvHorarioHorafinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DgvHorarioNota = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DgvHorarioActivar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.iTalk_GroupBox1 = new iTalk.iTalk_GroupBox();
             this.Btn_LupaBuscar = new System.Windows.Forms.Button();
             this.LblNombre = new iTalk.iTalk_Label();
@@ -47,12 +53,6 @@
             this.iTalk_Label1 = new iTalk.iTalk_Label();
             this.BtnGuardar = new iTalk.iTalk_Button_2();
             this.IndicadorOcupado = new iTalk.iTalk_ProgressIndicator();
-            this.DgvHorarioid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DgvHorariofecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DgvHorarioHorainicio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DgvHorarioHorafinal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DgvHorarioNota = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DgvHorarioActivar = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.iTalk_Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvHorario)).BeginInit();
             this.iTalk_GroupBox1.SuspendLayout();
@@ -64,7 +64,7 @@
             this.BtnEliminarFila.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.BtnEliminarFila.Image = null;
             this.BtnEliminarFila.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnEliminarFila.Location = new System.Drawing.Point(63, 451);
+            this.BtnEliminarFila.Location = new System.Drawing.Point(63, 456);
             this.BtnEliminarFila.Name = "BtnEliminarFila";
             this.BtnEliminarFila.Size = new System.Drawing.Size(42, 38);
             this.BtnEliminarFila.TabIndex = 136;
@@ -78,7 +78,7 @@
             this.BtnNuevaFila.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.BtnNuevaFila.Image = null;
             this.BtnNuevaFila.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnNuevaFila.Location = new System.Drawing.Point(12, 451);
+            this.BtnNuevaFila.Location = new System.Drawing.Point(12, 456);
             this.BtnNuevaFila.Name = "BtnNuevaFila";
             this.BtnNuevaFila.Size = new System.Drawing.Size(45, 38);
             this.BtnNuevaFila.TabIndex = 135;
@@ -93,7 +93,7 @@
             this.iTalk_Panel1.Location = new System.Drawing.Point(12, 192);
             this.iTalk_Panel1.Name = "iTalk_Panel1";
             this.iTalk_Panel1.Padding = new System.Windows.Forms.Padding(5);
-            this.iTalk_Panel1.Size = new System.Drawing.Size(792, 255);
+            this.iTalk_Panel1.Size = new System.Drawing.Size(825, 255);
             this.iTalk_Panel1.TabIndex = 16;
             this.iTalk_Panel1.Text = "iTalk_Panel1";
             // 
@@ -104,14 +104,14 @@
             this.DgvHorario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DgvHorario.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DgvHorario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvHorario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvHorario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DgvHorario.ColumnHeadersHeight = 30;
             this.DgvHorario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.DgvHorarioid,
@@ -124,8 +124,68 @@
             this.DgvHorario.Location = new System.Drawing.Point(13, 11);
             this.DgvHorario.Name = "DgvHorario";
             this.DgvHorario.RowHeadersVisible = false;
-            this.DgvHorario.Size = new System.Drawing.Size(763, 228);
+            this.DgvHorario.Size = new System.Drawing.Size(796, 228);
             this.DgvHorario.TabIndex = 11;
+            this.DgvHorario.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvHorario_CellContentDoubleClick);
+            // 
+            // DgvHorarioid
+            // 
+            this.DgvHorarioid.Frozen = true;
+            this.DgvHorarioid.HeaderText = "id";
+            this.DgvHorarioid.Name = "DgvHorarioid";
+            this.DgvHorarioid.Visible = false;
+            this.DgvHorarioid.Width = 50;
+            // 
+            // DgvHorariofecha
+            // 
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Format = "d";
+            dataGridViewCellStyle2.NullValue = "01/01/2020";
+            this.DgvHorariofecha.DefaultCellStyle = dataGridViewCellStyle2;
+            this.DgvHorariofecha.Frozen = true;
+            this.DgvHorariofecha.HeaderText = "Fecha de atención";
+            this.DgvHorariofecha.MaxInputLength = 10;
+            this.DgvHorariofecha.Name = "DgvHorariofecha";
+            this.DgvHorariofecha.ToolTipText = "Fecha";
+            this.DgvHorariofecha.Width = 150;
+            // 
+            // DgvHorarioHorainicio
+            // 
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            dataGridViewCellStyle3.Format = "t";
+            dataGridViewCellStyle3.NullValue = "8:00 a. m.";
+            this.DgvHorarioHorainicio.DefaultCellStyle = dataGridViewCellStyle3;
+            this.DgvHorarioHorainicio.Frozen = true;
+            this.DgvHorarioHorainicio.HeaderText = "Hora inicio";
+            this.DgvHorarioHorainicio.Name = "DgvHorarioHorainicio";
+            this.DgvHorarioHorainicio.Width = 110;
+            // 
+            // DgvHorarioHorafinal
+            // 
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            dataGridViewCellStyle4.Format = "t";
+            dataGridViewCellStyle4.NullValue = "4:00 p. m.";
+            this.DgvHorarioHorafinal.DefaultCellStyle = dataGridViewCellStyle4;
+            this.DgvHorarioHorafinal.Frozen = true;
+            this.DgvHorarioHorafinal.HeaderText = "Hora final";
+            this.DgvHorarioHorafinal.Name = "DgvHorarioHorafinal";
+            this.DgvHorarioHorafinal.Width = 110;
+            // 
+            // DgvHorarioNota
+            // 
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DgvHorarioNota.DefaultCellStyle = dataGridViewCellStyle5;
+            this.DgvHorarioNota.Frozen = true;
+            this.DgvHorarioNota.HeaderText = "Nota";
+            this.DgvHorarioNota.Name = "DgvHorarioNota";
+            this.DgvHorarioNota.Width = 340;
+            // 
+            // DgvHorarioActivar
+            // 
+            this.DgvHorarioActivar.Frozen = true;
+            this.DgvHorarioActivar.HeaderText = "Activar";
+            this.DgvHorarioActivar.Name = "DgvHorarioActivar";
+            this.DgvHorarioActivar.Width = 60;
             // 
             // iTalk_GroupBox1
             // 
@@ -139,7 +199,7 @@
             this.iTalk_GroupBox1.MinimumSize = new System.Drawing.Size(136, 50);
             this.iTalk_GroupBox1.Name = "iTalk_GroupBox1";
             this.iTalk_GroupBox1.Padding = new System.Windows.Forms.Padding(5, 28, 5, 5);
-            this.iTalk_GroupBox1.Size = new System.Drawing.Size(790, 104);
+            this.iTalk_GroupBox1.Size = new System.Drawing.Size(825, 104);
             this.iTalk_GroupBox1.TabIndex = 15;
             this.iTalk_GroupBox1.Text = "Medico";
             // 
@@ -160,11 +220,11 @@
             // 
             this.LblNombre.AutoSize = true;
             this.LblNombre.BackColor = System.Drawing.Color.Transparent;
-            this.LblNombre.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNombre.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.LblNombre.Location = new System.Drawing.Point(430, 47);
+            this.LblNombre.Location = new System.Drawing.Point(403, 42);
             this.LblNombre.Name = "LblNombre";
-            this.LblNombre.Size = new System.Drawing.Size(81, 25);
+            this.LblNombre.Size = new System.Drawing.Size(103, 32);
             this.LblNombre.TabIndex = 18;
             this.LblNombre.Text = "Nombre";
             // 
@@ -183,7 +243,7 @@
             this.iTalk_Label3.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_Label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iTalk_Label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.iTalk_Label3.Location = new System.Drawing.Point(360, 49);
+            this.iTalk_Label3.Location = new System.Drawing.Point(342, 49);
             this.iTalk_Label3.Name = "iTalk_Label3";
             this.iTalk_Label3.Size = new System.Drawing.Size(64, 20);
             this.iTalk_Label3.TabIndex = 16;
@@ -207,7 +267,7 @@
             this.iTalk_Label1.BackColor = System.Drawing.Color.Transparent;
             this.iTalk_Label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.iTalk_Label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(142)))), ((int)(((byte)(142)))), ((int)(((byte)(142)))));
-            this.iTalk_Label1.Location = new System.Drawing.Point(121, 469);
+            this.iTalk_Label1.Location = new System.Drawing.Point(121, 474);
             this.iTalk_Label1.Name = "iTalk_Label1";
             this.iTalk_Label1.Size = new System.Drawing.Size(42, 20);
             this.iTalk_Label1.TabIndex = 12;
@@ -220,7 +280,7 @@
             this.BtnGuardar.ForeColor = System.Drawing.Color.White;
             this.BtnGuardar.Image = null;
             this.BtnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnGuardar.Location = new System.Drawing.Point(636, 464);
+            this.BtnGuardar.Location = new System.Drawing.Point(655, 465);
             this.BtnGuardar.Name = "BtnGuardar";
             this.BtnGuardar.Size = new System.Drawing.Size(166, 40);
             this.BtnGuardar.TabIndex = 8;
@@ -231,7 +291,7 @@
             // IndicadorOcupado
             // 
             this.IndicadorOcupado.BackColor = System.Drawing.Color.White;
-            this.IndicadorOcupado.Location = new System.Drawing.Point(483, 446);
+            this.IndicadorOcupado.Location = new System.Drawing.Point(483, 451);
             this.IndicadorOcupado.MinimumSize = new System.Drawing.Size(80, 80);
             this.IndicadorOcupado.Name = "IndicadorOcupado";
             this.IndicadorOcupado.P_AnimationColor = System.Drawing.Color.Gainsboro;
@@ -242,70 +302,11 @@
             this.IndicadorOcupado.Text = "iTalk_ProgressIndicator1";
             this.IndicadorOcupado.Visible = false;
             // 
-            // DgvHorarioid
-            // 
-            this.DgvHorarioid.Frozen = true;
-            this.DgvHorarioid.HeaderText = "id";
-            this.DgvHorarioid.Name = "DgvHorarioid";
-            this.DgvHorarioid.Visible = false;
-            this.DgvHorarioid.Width = 50;
-            // 
-            // DgvHorariofecha
-            // 
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.Format = "d";
-            dataGridViewCellStyle7.NullValue = "01/01/2020";
-            this.DgvHorariofecha.DefaultCellStyle = dataGridViewCellStyle7;
-            this.DgvHorariofecha.Frozen = true;
-            this.DgvHorariofecha.HeaderText = "Fecha de atención";
-            this.DgvHorariofecha.MaxInputLength = 10;
-            this.DgvHorariofecha.Name = "DgvHorariofecha";
-            this.DgvHorariofecha.ToolTipText = "Fecha";
-            this.DgvHorariofecha.Width = 150;
-            // 
-            // DgvHorarioHorainicio
-            // 
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            dataGridViewCellStyle8.Format = "t";
-            dataGridViewCellStyle8.NullValue = "8:00 a. m.";
-            this.DgvHorarioHorainicio.DefaultCellStyle = dataGridViewCellStyle8;
-            this.DgvHorarioHorainicio.Frozen = true;
-            this.DgvHorarioHorainicio.HeaderText = "Hora inicio";
-            this.DgvHorarioHorainicio.Name = "DgvHorarioHorainicio";
-            this.DgvHorarioHorainicio.Width = 110;
-            // 
-            // DgvHorarioHorafinal
-            // 
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Tahoma", 11.25F);
-            dataGridViewCellStyle9.Format = "t";
-            dataGridViewCellStyle9.NullValue = "4:00 p. m.";
-            this.DgvHorarioHorafinal.DefaultCellStyle = dataGridViewCellStyle9;
-            this.DgvHorarioHorafinal.Frozen = true;
-            this.DgvHorarioHorafinal.HeaderText = "Hora final";
-            this.DgvHorarioHorafinal.Name = "DgvHorarioHorafinal";
-            this.DgvHorarioHorafinal.Width = 110;
-            // 
-            // DgvHorarioNota
-            // 
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DgvHorarioNota.DefaultCellStyle = dataGridViewCellStyle10;
-            this.DgvHorarioNota.Frozen = true;
-            this.DgvHorarioNota.HeaderText = "Nota";
-            this.DgvHorarioNota.Name = "DgvHorarioNota";
-            this.DgvHorarioNota.Width = 300;
-            // 
-            // DgvHorarioActivar
-            // 
-            this.DgvHorarioActivar.Frozen = true;
-            this.DgvHorarioActivar.HeaderText = "Activar";
-            this.DgvHorarioActivar.Name = "DgvHorarioActivar";
-            this.DgvHorarioActivar.Width = 60;
-            // 
             // FrmHorario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(814, 519);
+            this.ClientSize = new System.Drawing.Size(849, 532);
             this.Controls.Add(this.BtnEliminarFila);
             this.Controls.Add(this.BtnNuevaFila);
             this.Controls.Add(this.iTalk_Panel1);

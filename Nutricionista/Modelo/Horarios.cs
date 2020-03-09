@@ -12,6 +12,7 @@ namespace ApiCitasMedicas.Models
         public string Finatencion { get; set; }
         public bool? Activo { get; set; }
         public DateTime Fecharegistro { get; set; }
+        public string Nota { get; set; }
 
         public virtual Medicos Medico { get; set; }
     }
