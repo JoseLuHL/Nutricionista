@@ -160,6 +160,7 @@
     <Compile Include="EPS.cs">
       <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
     </Compile>
+    <Compile Include="Errores\Errores.cs" />
     <Compile Include="ESPECIALIDADES.cs">
       <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
     </Compile>
@@ -297,6 +298,7 @@
       <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
     </Compile>
     <Compile Include="Operaciones Comun\ConsultasComun.cs" />
+    <Compile Include="Operaciones Comun\Mensajes.cs" />
     <Compile Include="Paciente.cs">
       <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
     </Compile>
@@ -312,6 +314,7 @@
       <DependentUpon>Model_Historia_Clinica.tt</DependentUpon>
     </Compile>
     <Compile Include="servicio\ApiEspecialidad.cs" />
+    <Compile Include="servicio\ApiHorario.cs" />
     <Compile Include="servicio\ApiMedico.cs" />
     <Compile Include="servicio\ApiMedicosEspecialidades.cs" />
     <Compile Include="servicio\ApiPaciente.cs" />

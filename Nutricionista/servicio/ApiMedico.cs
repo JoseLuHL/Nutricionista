@@ -13,7 +13,7 @@ namespace Nutricionista.servicio
 {
     public class ApiMedico
     {
-        private string url = ConfigurationManager.AppSettings["url"].ToString() + "Medicos";
+        private string url = ConfigurationManager.AppSettings["url"].ToString() + "Medicos/";
         public  string error = "";
         public async Task<Medicos> MedicosAsync(string id)
         {
